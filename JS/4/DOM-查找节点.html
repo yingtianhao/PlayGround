@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查找节点</title>
+</head>
+<body>
+	<div id="div1" class="div100">1</div>
+	<div id="div2" class="div100">2</div>
+	<div id="div3" class="div200">3</div>
+	<div id="div4" class="div200">4</div>
+	<input type="button" name="but" id="botton1" value="按钮" class="but">
+	<input type="button" name="but" id="botton2" value="按钮" class="but">
+	<script type="text/javascript">
+		//通过ID属性查找
+		var but = document.getElementById('botton1');
+		console.log(but);
+		var div1 = document.getElementById('div1');
+		console.log(div1);
+
+		//通过标签名称
+		//返回一个HTMLCollection，类似于数组的特殊对象
+		var divs = document.getElementsByTagName('div');
+		console.log(divs);
+
+		//通过class获取
+		var div100 = document.getElementsByClassName('div100');
+		console.log(div100);
+
+		//通过name属性获取
+		//返回一个NodeList列表
+		var name = document.getElementsByName('but');
+		console.log(name);
+		
+		//H5提供的方法 根据选择器获取 CSS里的选择器 #name .div [name=user] 不支持伪类和伪元素选择器
+		//只返回第一个
+		var divqs = document.querySelector('div');
+		console.log(divqs);
+		//会返回所有
+		var divqss = document.querySelectorAll('div');
+		console.log(divqss);
+	</script>
+</body>
+</html>

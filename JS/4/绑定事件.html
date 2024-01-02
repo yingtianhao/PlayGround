@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绑定事件</title>
+</head>
+<body>
+    <input type="button" name="" onclick="botton1();" value="行内绑定"> <!-- 行内绑定 -->
+    <input type="button" id="but" value="js绑定"> <!-- js绑定 -->
+    <input type="button" id="but2" value="事件监听"> <!-- 事件监听 -->
+    <script type="text/javascript">
+        function botton1(){ //行内绑定 如果绑定了多次，始终执行第一次
+            alert(123);
+            console.log(456);
+        }
+
+        document.getElementById('but').onclick = function(){ //js绑定 如果绑定多次，始终执行最后一次[覆盖]
+            alert('js绑定');
+        }
+
+        document.getElementById('but2').addEventListener('click',function(){ //事件监听 ('事件',一个函数);
+                                                            //绑定了多次，都会执行，安装绑定的顺序执行。
+            alert('监听');
+        });
+        //总结:
+        //行内绑定不推荐，因为会把js和html混在一起，不方便后期维护
+        //自己写一些简单效果时可以使用js绑定，页面内容不多时进行绑定
+        //事件监听是在复杂的页面[js非常多]的地方最推荐的方式
+        //通过removeEventListener需要在传参数时和addEventListener完全一致，也就是说函数部分不能临时定义 
+        //移除事件一般用于判断中，比如点过一次之后移除
+    </script>
+</body>
+</html>

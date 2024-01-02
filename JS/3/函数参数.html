@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数参数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//计算1-n之间的数的和
+		function he(n){ //声明函数是，定义一个参数n 调用函数时给参数赋值
+			var total=0;
+			for(var i=1;i<=n;i++){
+				total+=i;
+			}
+			console.log(total);
+		} 
+		//定义函数时 放在函数小括号中的叫做形式参数 个数不限 多个参数直接用""隔开
+		he(50);
+		he(190);
+		//调用函数时 放在函数小括号中的叫做实际参数 个数不限 多个参数直接用""隔开
+		//实际参数多传参数，多的参数会被忽略。如果少传，少的参数会由undefined代替
+
+		//计算m-n之间的数的和
+		function he2(m,n){ //声明函数是，定义一个参数n 调用函数时给参数赋值
+			var total=0;
+			for(var i=m;i<=n;i++){
+				total+=i;
+			}
+			console.log(total);
+		}
+		he2(8,190);
+	</script>
+</body>
+</html>

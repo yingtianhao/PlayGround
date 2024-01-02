@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for循环</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//基本语法: for(初始值;循环条件;计数+1){循环体}
+		for(var num=0;num<10;num++){
+			console.log(num);
+		}
+		//执行时计数+1在循环的最后执行
+
+		//计算1-100之间，所有偶数的和
+		var num1=0;
+		for(var num2=1;num2<=100;num2++){
+			if (num2%2==0) {//num2%2=0时可以被2整除，是偶数
+				num1 += num2;
+			}
+		}
+		console.log(num1)
+
+		//画一个正方形小星星 ⭐ 输出5行，每行五个
+		for(var xx=1;xx<=5;xx++){
+			document.write("⭐⭐⭐⭐⭐<br>");
+		}
+		//三角形
+		for(var sjx1=1;sjx1<=5;sjx1++){
+			if(sjx1==1){
+				document.write("⭐<br>");
+			}else if(sjx1==2){
+				document.write("⭐⭐<br>");
+			}else if(sjx1==3){
+				document.write("⭐⭐⭐<br>");
+			}else if(sjx1==4){
+				document.write("⭐⭐⭐⭐<br>");
+			}else{
+				document.write("⭐⭐⭐⭐⭐<br>");
+			}
+		}
+		//三角形的写法2 因为个数和行数是相对应的
+		for(var x=1;x<=5;x++){
+			for(j=1;j<=x;j++){
+				document.write("⭐");
+			}
+			document.write("<br>");
+		}
+		//九九乘法表
+		//1.先安装三角形的写法2控制行数个数 2.改内容
+		for(p=1;p<=9;p++){
+			for(l=1;l<=p;l++){
+				document.write(l+"*"+p+"="+l*p+" ");
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>

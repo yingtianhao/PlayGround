@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//基本语法:switch(表达式){
+		//	case "值1":
+		//				//分支1
+		//	break;		//结束
+		//	case "值2":
+		//				//分支2
+		//	break;		//结束
+		//  default: 	//分支3
+		//  此处可以省略break
+		//	}
+		//如果是值1，执行分支1，到break结束。如果不是值1则判断值2，以此类推。如果不是case中的值，则执行default。执行过后会跳过接下来的分支。
+		//switch和if的区别:if可以判断区间，switch能判断具体的某一个值，不能判断区间范围。
+		var num=100;
+		switch(num){
+			case 100:
+				console.log("值是100");
+				break;
+			case 90:
+				console.log("值是90");
+				break;
+			default:
+				console.log("无法确定");
+		}
+		//根据等级判断分数范围
+		var level="A";
+		switch(level){
+			case "A":
+				console.log("你的分数高于90");
+				break;
+			case "B":
+				console.log("你的分数高于80低于90");
+				break;
+			case "C":
+				console.log("你的分数高于70低于80");
+				break;
+			case "D":
+				console.log("你的分数高于60低于70");
+				break;
+			case "E":
+				console.log("你的分数低于60");
+				break;
+			default:
+				console.log("请输入正确的等级");
+		}
+		//根据月份判断天数 break的妙用
+		var mon=1;
+		switch(mon){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				console.log("31天");
+				break;
+			case 2:
+			 	console.log("28天/29天");
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				console.log("30天");
+				break;
+			default:
+				console.log("格式错误");
+		}
+	</script>
+</body>
+</html>

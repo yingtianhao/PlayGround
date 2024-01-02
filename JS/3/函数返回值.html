@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数返回值</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//计算m-n之间的数的和
+		function he2(m,n){
+			var total=0;
+			for(var i=m;i<=n;i++){
+				total+=i;
+			}
+			//console.log(total);
+			return(total); //让外面接收 作为函数的返回值 是函数执行的结果
+			//函数中return之后的代码不执行
+		}
+		//得到total的值而不是直接输出
+		var num=he2(1,190);
+		console.log(num);
+	</script>
+</body>
+</html>

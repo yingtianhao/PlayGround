@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继续和中断循环</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//输出1-100之间的数字 3的倍数不能输出
+		/*
+		for(var i=1;i<=100;i++){
+			if(i%3!=0){
+				console.log(i);
+			}
+		}
+		*/
+		for(var i=1;i<=100;i++){
+			if(i%3==0){
+				continue; //终止当前这一次循环[跳过]，什么都不做
+			}else{        //当有continue时，后面的else可以省略
+				console.log(i);
+			}
+		}
+
+		//输出1以上的数，碰到3的倍数就停止
+		for(o=1;o>=1;o++){
+			if(o%3==0){
+				break;    //终止整个循环
+			}else{        //同理，此处的else也可以省略
+				console.log(o);
+			}
+		}
+		for(var x=1;x<=5;x++){
+			for(j=1;j<=x;j++){
+				if(j>=3){
+					break;//想要在星星个数超过3个时终止整个循环，但这里的break只终止了里面的小循环
+				}
+				document.write("⭐");
+			}
+			document.write("<br>");
+		}
+		//可以通过命名循环的方法达到之前没有达到的效果
+		//在continue和break后面加上 空格 名称 可以 继续/跳过 指定的循环
+		a:for(var x=1;x<=5;x++){//大的循环命名为a
+			b:for(j=1;j<=x;j++){//小的循环命名为b
+				if(j>=3){
+					document.write("⭐");//第三行补一颗星星
+					break a;//终止a循环
+				}
+				document.write("⭐");
+			}
+			document.write("<br>");
+		}
+	</script>
+</body>
+</html>

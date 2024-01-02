@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象相关</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//定义方式和基本使用
+		var d={
+			name:"张三",
+			age:37, //如果值是数字，可以不用加引号
+			say:function(){ //值可以是一个函数
+				return 300;
+			}
+		};
+		console.log(d.name);
+		console.log(d.say()); //通过()调用函数
+	</script>
+	<script type="text/javascript">
+		//new Object(); //实例化内置构造函数 得到一个 实例对象 可以把new理解为把函数转化成对象
+		//构造函数被实例化时内部的代码会自动执行
+		var obj1=new Object(); 
+		//此时obj1是一个空的对象 相当于 var obj1={};
+		//new 自定义构造函数();
+		//被new实例化过的函数就是构造函数
+		function Fn1(){   //构造函数的名称通常首字母大写 是一种约定俗成的习惯
+			this.age=30,  //在函数内部使用this设置属性和方法 this是函数中的对象本身
+			this.say=function(){
+				return "hello";
+			}
+		}
+		var obj2=new Fn1(); //实例化构造函数fn1,得到对象
+		console.log(obj2,typeof obj2);
+		console.log(obj2.say());
+	</script>
+	<script type="text/javascript">
+		//简单运用
+		function Pe(n,a){
+			this.name=n,
+			this.age=a,
+			this.say=function(){
+				return "hello!我叫"+this.name;
+			}
+		}
+		var pe1=new Pe("张三",37);
+		console.log(pe1,pe1.say());
+	</script>
+</body>
+</html>

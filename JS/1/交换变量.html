@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交换变量</title>
+</head>
+<body>
+    <script>
+        var dog = 5;
+        var cat = 10;
+        //交换数量
+        var cat2 = 5;
+        dog = cat;
+        cat = cat2;
+        //第二种方法[此处已经是二次交换了]
+        dog = dog + cat;
+        cat = dog - cat;
+        dog = dog - cat;
+        alert(dog);//弹框输出
+        console.log(dog);//输出在控制台[调试工具栏]
+        document.write(cat);//打印在页面
+        console.log(typeof dog);//在控制台输出dog变量的数据类型
+    </script>
+</body>
+</html>

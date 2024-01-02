@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//数组遍历-循环数组 输出数组中所有的值
+		var a=[100,200,300,400]
+		for(var c=0;c<=a.length-1;c++){
+			console.log(a[c]);
+		}
+		//例子:求数组中所有数之和
+		var n=0;
+		for(var v=0;v<a.length;v++){ //v < a.length == v <= a.length-1
+			n+=a[v];
+		}
+		console.log(n);
+		//例子:求数组中偶数的和
+		var a2=[100,457,200,343]
+		var n2=0;
+		for(var v2=0;v2<a2.length;v2++){
+			if(a2[v2]%2==0){
+				n2+=a2[v2];
+			}else{
+				continue;
+			}
+		}
+		console.log(n2);
+		//例子:将所有值用字符串拼接,并在每个字符串直接隔开
+		n3="";
+		var a3=[100,"你好",null,undefined]
+		for(var v3=0;v3<a3.length;v3++){
+			if(v3==a3.length-1){
+				n3+=String(a3[v3]); //去除最后一个 |
+			}else{
+				n3+=String(a3[v3]);
+				n3+="|";
+			}
+		}
+		console.log(n3);
+	</script>
+</body>
+</html>

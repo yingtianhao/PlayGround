@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var obj1={
+			name:"张三",
+			age:"37",
+			skill:function(){
+				return "咆哮";
+			}
+		}
+		//遍历对象成员 for in
+		for(var i in obj1){
+			//i就是对象中的成员名称
+			console.log(i);
+			console.log(obj1[i]); //[]表示i是一个变量
+		}
+		//此方法也可以用来遍历数组
+		var su1=[1,"你好","hello"];
+		for(var i2 in su1){
+			console.log(su1[i2]);
+		}
+	</script>
+</body>
+</html>

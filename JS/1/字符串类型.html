@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串类型</title>
+</head>
+<body>
+    <script>
+        var str="hofaeair";
+        console.log(str);
+        var strhof="str不完全是'hofaeair'";//当字符串里包含引号时，要使内外的引号不同
+        console.log(typeof(strhof));
+        console.log(strhof);
+        //当字符串里包含单双引号时，需要用到转义符
+        //详见此文件夹下:转义符.md
+        console.log(strhof.length);//获取strhof的字符串长度
+        var str2="应该没错"
+        var str3=strhof+str2;
+        console.log(str3);//字符串拼接
+        console.log(undefined == null);
+        //由于都代表空[没有]，所以判断时undefined和null会相等
+        //区别:undefined表示未定义[未填写值时属性为此]，null是一个空值[需要手动赋值]
+        console.log(undefined === null);
+        //===为全等判断，==为相等判断。可以体现出区别。相等判断只比对值是否相同。全等判断除了值外还会判断数据类型是否相等。
+    </script>
+</body>
+</html>

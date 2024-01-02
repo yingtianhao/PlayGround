@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数值类型</title>
+</head>
+<body>
+    <script>
+        var number = 0.1 + 0.2;
+        console.log(number);//部分浮点数计算机计算时会有精度误差
+        console.log(number==0.3);//判断number是否等于0.3，会返回布尔值 ==为等于
+        //尽量避免使用浮点数进行运算
+        //解决方法:先转化为整数相加，再整除
+        var number1=(0.1*10+0.2*10)/10;
+        console.log(number1);
+        console.log(number1==0.3)
+    </script>
+</body>
+</html>

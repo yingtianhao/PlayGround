@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//函数举例: alert(123); 这个是弹窗函数
+		//函数:一堆完成某个特定功能的代码
+		
+		//声明函数 使用function关键字
+		//封装了一个做菜函数
+		function cook(){
+			console.log("洗菜"); //函数体 声明时代码不会执行
+			console.log("切菜");
+			console.log("炒菜");
+		}
+		cook(); //函数调用 调用时执行函数体中的代码
+
+		//使用表达式声明函数 把函数赋值给变量名
+		var cook2 = function(){
+			console.log("淘米"); //函数体
+			console.log("煮米");
+		}
+		cook2();
+
+		//匿名函数自调用
+		/*
+		function(){ //没有名字的函数
+			console.log("匿名");
+		}
+		*/ 
+		//自调用[立即调用] 只能调用一次
+		(function(){ //在前后加上小括号表示是一个整体
+			var a=1; //如果要起到独立空间的效果，必须加上var重新定义
+			console.log("匿名");
+		})();//后面再加一对小括号表示调用
+		//好处:匿名函数里和外互不影响，相当于一个独立的空间，防止全局变量被污染
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多分支结构</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//基本语法:if(表达式1){分支代码1}else if(表达式2){分支代码2}else if(表达式3){分支代码3}else{分支代码4}…… 
+		//最后一个else if的if和表达式可以省略，中间的else if可以有任意多个
+		//如果表达式1的结构为真，则执行分支1，跳过后面的所有分支。如果表达式1的结果为假则跳过分支1并判断表达式2，以此类推。
+		//如果所有的表达式的结果都是假，则执行
+		var age=Number(prompt("你的年龄"));
+		if (0<=age&&age<=5) {
+			console.log("你是小宝宝");
+		}else if (0<=age&&age<=18) {
+			console.log("你是青少年");
+		}else if (0<=age&&age<=30) {
+			console.log("你是青年");
+		}else if (0<=age&&age<=45) {
+			console.log("你是中年");
+		}else if (0<=age&&age>45) {
+			console.log("你是中老年");
+		}else{
+			console.log("你不是人");
+		}
+
+		// var score = prompt("请输入您的分数"); //弹框+输入框，输入的值在score里面
+		var score = Number( prompt("请输入您的分数") ); // '100adsds'
+		// var score = parseFloat( prompt("请输入您的分数") ); // '100afdsad'
+		// console.log(score);
+		if(isNaN(score)){
+		console.log('您输入的分数格式不正确');
+		}else{
+			//输入的分数格式正确，再进行以下的判断
+			if(score > 100){
+				console.log('你做梦呢');
+			}else if(score >= 90){
+				console.log('优秀/A等');
+			}else if(score >= 80){
+				console.log('良好/B等');
+			}else if(score >= 70){
+				console.log('一般/C等');
+			}else if(score >= 60){
+				console.log('及格/D等');
+			}else{
+				console.log('不及格/E等');
+			}
+		}
+		console.log('结束');
+	</script>
+</body>
+</html>

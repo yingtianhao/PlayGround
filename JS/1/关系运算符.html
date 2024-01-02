@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系运算符</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// < 小于 > 大于 == 等于 != 不等于 === 全等 !== 不全等
+		console.log("1"==1);//字符串数字和数字可以直接判断
+		console.log(1==1);
+		console.log("1"===1);//要判断类型是否相等需要使用全等
+		//特殊情况
+		console.log(0==false);
+		console.log("0"==false);//true 此处和Boolean的结果相反 ==号是对值的判断
+		console.log(1==true);
+		console.log(0=="",0==null,0==undefined);//true false false
+		console.log(1=="",1==null,1==undefined);//false false false
+	</script>
+</body>
+</html>

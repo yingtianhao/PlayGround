@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js类型转化</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//转化成字符串类型 String函数
+		var birds = 5;
+		console.log(birds.toString());
+		console.log(String(birds));//两种用法不一样，toString要把变量写在前面，String直接写在括号里
+		//函数String是万能通用的，toString对有些值没用，比如undefined和null
+		var birdsname = "milk";
+		console.log(birds + birdsname);
+		//当+两边有一个为字符串时，拼接后的结果会是字符串
+
+		//转化成数值类型 Number函数
+		var a = 1;
+		var b = b;
+		console.log(Number(a));//使用函数Number转化成数值类型
+		console.log(Number(b));//当转化内容为字母时，会返回NaN即not a number 
+		//NaN是数值类型中一个特殊的数值,但是它不是一个具体的数字
+		//undefined也会返回NaN
+		//布尔值，true和false转化成数值后会变成1和0 null转化后也是0
+		console.log(NaN == NaN);
+		console.log(NaN == 1);
+		//NaN和任何值都不相等,因为NaN可能是任何值
+		var c = NaN;
+		console.log(isNaN(c))//由于不能用==判断,判断一个值是不是NaN的特殊方法
+		//转换成整数[取整] parseInt函数
+		console.log(parseInt(21.21));//此函数直接取整，不会进行四舍五入
+		console.log(parseInt("100"));//字符串类型的数字可以直接生效
+		console.log(parseInt(b));//字母转化后会变成NaN
+		console.log(parseInt("100sdaaf"));//保留开头的数字
+		console.log(parseInt("bb100af"));//中间有数字无效，返回NaN
+		//转化为浮点数 parseFloat函数
+		console.log(parseFloat(21.21));//不变
+		console.log(parseFloat(21));//保留整数不变
+		console.log(parseFloat("100.89"));//数字字符串类型转化为数值类型
+		console.log(parseFloat("1abcd"));//保留开头的数字
+		console.log(parseFloat("ab1cd"));//中间有数字无效，返回NaN
+		//使用场景
+		console.log("10"+"12.21");//相加后结果是字符串拼接
+		console.log(parseInt("10")+parseFloat("12.21"));//此处结果为数值相加
+		//通过符号转换 因为字符串无法加减，所以会自动转化为数值类型
+		var d = "20";
+		console.log(-d);
+		console.log(+d);//正负转换也是符号运算
+		console.log(d-0);//因为一方是数值，所以不会进行字符串拼接
+
+		//转化成布尔值 Boolean函数
+		var b1 = Boolean(0);
+		var b2 = Boolean(1);
+		var b3 = Boolean("0");//字符串里面有字符，所以布尔值是true
+		var b4 = Boolean(null);
+		var b5 = Boolean(undefined);
+		var b6 = Boolean(NaN);//表示不是数值，所以是false
+		var b7 = Boolean("");
+		console.log(b1,b2,b3,b4,b5,b6,b7) //false true true false false false false
+		//0,null,undefined,NaN,""转化后是false.数字里除了0之外都会返回true
+	</script>
+</body>
+</html>

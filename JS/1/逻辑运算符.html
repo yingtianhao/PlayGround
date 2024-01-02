@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a=1,b="1.23",c=true,d=false,e=undefined,f=null;
+		//逻辑与 &&
+		//从左到右，左边为真，直接取右边，左边为假，直接取左边
+		console.log(a&&b);
+		console.log(a&&c);
+		console.log(a&&d);
+		console.log(a&&e);
+		console.log(a&&f);
+
+		console.log(d&&a);
+		console.log(d&&f);
+
+		//逻辑或 ||
+		//从左到右，左边为真，直接取左边，左边为假，直接取右边
+		console.log(a||b);
+		console.log(a||c);
+		console.log(a||d);
+		console.log(a||e);
+		console.log(a||f);
+
+		console.log(d||a);
+		console.log(f||a);
+		console.log(f||a);
+
+		//取反 !
+		console.log(!a);//false 从true[1]转化到false
+		console.log(!d);//true 直接从false转化到true
+	</script>
+</body>
+</html>
